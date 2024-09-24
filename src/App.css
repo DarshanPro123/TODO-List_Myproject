@@ -119,6 +119,10 @@ li {
   border-bottom: 1px solid #ddd;
 }
 
+li span::first-letter {
+  text-transform: uppercase;
+}
+
 .buttons {
   display: flex;
   gap: 40px;
@@ -132,7 +136,19 @@ span {
   font-size: 1.4rem;
 }
 
-span:last-child {
+.emptylist {
+  height: 60vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  font-weight: 500;
+  color: #201f1f;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons span {
   cursor: pointer;
 }
 

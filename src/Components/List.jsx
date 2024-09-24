@@ -8,7 +8,6 @@ const List = ({ list, listDel }) => {
           return (
             <li key={lst.id}>
               {" "}
-              {/* Move key here */}
               <span>{lst.val}</span>
               <div className="buttons">
                 <span>📁</span>
@@ -27,8 +26,8 @@ List.propTypes = {
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
       val: PropTypes.string.isRequired,
     })
-  ).isRequired, // Marking as required for better validation
-  listDel: PropTypes.func.isRequired, // Adding prop type for listDel function
+  ).isRequired,
+  listDel: PropTypes.func.isRequired,
 };
 
 export default List;
