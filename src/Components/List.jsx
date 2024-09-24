@@ -10,7 +10,10 @@ const List = ({ list, listDel }) => {
               {" "}
               {/* Move key here */}
               <span>{lst.val}</span>
-              <span onClick={() => listDel(lst.id)}>❌</span>
+              <div className="buttons">
+                <span>📁</span>
+                <span onClick={() => listDel(lst.id)}>❌</span>
+              </div>
             </li>
           );
         })}

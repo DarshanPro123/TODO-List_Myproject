@@ -18,8 +18,8 @@ function App() {
       <h1>my to-do app</h1>
       <div className="input-base">
         <Input_todo list={list} onhandleAdd={handleAdd} />
-        <Lists list={list} listDel={handleDel} />
       </div>
+      <Lists list={list} listDel={handleDel} />
     </>
   );
 }
