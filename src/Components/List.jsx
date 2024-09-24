@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
-const List = ({ list }) => {
+const List = ({ list, listDel }) => {
   return (
     <>
       {/* // eslint-disable-next-line react/prop-types */}
@@ -12,7 +12,7 @@ const List = ({ list }) => {
               <div key={lst.id}>
                 <li>
                   <span>{lst.val}</span>
-                  <span>❌</span>
+                  <span onClick={() => listDel(lst.id)}>❌</span>
                 </li>
               </div>
             </>

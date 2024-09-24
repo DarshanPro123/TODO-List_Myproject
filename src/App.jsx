@@ -8,13 +8,17 @@ function App() {
   const handleAdd = (data) => {
     setList((datas) => [...datas, data]);
   };
+
+  const handleDel = (id) => {
+    setList((list) => list.filter((item) => item.id !== id));
+  };
   return (
     <>
       {" "}
       <h1>my to-do app</h1>
       <div className="input-base">
         <Input_todo list={list} onhandleAdd={handleAdd} />
-        <Lists list={list} />
+        <Lists list={list} listDel={handleDel} />
       </div>
     </>
   );

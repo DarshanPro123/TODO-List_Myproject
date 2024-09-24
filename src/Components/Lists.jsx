@@ -1,12 +1,12 @@
 import List from "./List";
 
 // eslint-disable-next-line react/prop-types
-const Lists = ({ list }) => {
+const Lists = ({ list, listDel }) => {
   return (
     <>
       <div className="lists_box">
         <ul>
-          <List list={list} />
+          <List list={list} listDel={listDel} />
         </ul>
       </div>
     </>
