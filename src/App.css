@@ -155,14 +155,14 @@ span {
 }
 
 .emptylist::before {
-  content: ""; /* Ensure this is present if you want to create a visual effect */
+  content: "";
   position: absolute;
-  top: 0; /* Position it at the top */
-  left: 0; /* Position it at the left */
-  right: 0; /* Stretch to the right */
-  bottom: 0; /* Stretch to the bottom */
-  background-color: rgba(0, 0, 0, 0.368); /* Semi-transparent black overlay */
-  z-index: 1; /* Place behind other elements */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.368);
+  z-index: 1;
 }
 
 .buttons span {

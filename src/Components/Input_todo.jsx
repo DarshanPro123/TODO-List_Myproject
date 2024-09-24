@@ -10,7 +10,9 @@ const Input_todo = ({ onhandleAdd }) => {
 
     const newList = { val, id: Date.now() };
     console.log(newList);
-    onhandleAdd(newList);
+    {
+      val.length !== 0 ? onhandleAdd(newList) : alert("Add value on list");
+    }
     setValue("");
   };
 
