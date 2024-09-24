@@ -137,15 +137,32 @@ span {
 }
 
 .emptylist {
-  height: 60vh;
+  height: 100vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
+  font-size: 4rem;
   font-weight: 500;
-  color: #201f1f;
+  color: #080808;
   text-align: center;
+  background-image: url(./assets/questionmark.png);
+  background-repeat: no-repeat;
+  background-position: center;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.emptylist::before {
+  content: ""; /* Ensure this is present if you want to create a visual effect */
+  position: absolute;
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it at the left */
+  right: 0; /* Stretch to the right */
+  bottom: 0; /* Stretch to the bottom */
+  background-color: rgba(0, 0, 0, 0.368); /* Semi-transparent black overlay */
+  z-index: 1; /* Place behind other elements */
 }
 
 .buttons span {
