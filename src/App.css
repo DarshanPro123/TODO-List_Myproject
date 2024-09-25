@@ -123,6 +123,11 @@ li span::first-letter {
   text-transform: uppercase;
 }
 
+.inputData {
+  display: flex;
+  gap: 20px;
+}
+
 .buttons {
   display: flex;
   gap: 40px;

@@ -29,8 +29,14 @@ const List = ({ lst, listDel, onEdit, onCheck }) => {
           </>
         ) : (
           <>
-            <input type="checkbox" onClick={() => onCheck(lst.id)} />
-            <span style={lst.c}>{lst.val}</span>
+            <div className="inputData">
+              <input type="checkbox" onClick={() => onCheck(lst.id)} />
+              <span
+                style={lst.checked ? { textDecoration: "Line-through" } : {}}
+              >
+                {lst.val}
+              </span>
+            </div>
             <div className="buttons">
               <span onClick={() => setEditing(true)}>🖋️</span>
               <span onClick={() => listDel(lst.id)}>❌</span>
