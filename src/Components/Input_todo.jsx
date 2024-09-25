@@ -4,33 +4,29 @@ import { useState } from "react";
 const Input_todo = ({ onhandleAdd }) => {
   const [val, setValue] = useState("");
 
-  const handlieSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(val);
+
+    if (val.length === 0) {
+      alert("Please add a value to the list");
+      return;
+    }
 
     const newList = { val, id: Date.now() };
-    console.log(newList);
-    {
-      val.length !== 0 ? onhandleAdd(newList) : alert("Add value on list");
-    }
+    onhandleAdd(newList);
     setValue("");
   };
 
-  const handleSetVal = (e) => {
-    setValue(e.target.value);
-  };
   return (
-    <>
-      <form className="input-box" onSubmit={handlieSubmit}>
-        <input
-          value={val}
-          onChange={handleSetVal}
-          type="text"
-          placeholder="Enter Todo...👉"
-        />
-        <button>ADD.</button>
-      </form>
-    </>
+    <form className="input-box" onSubmit={handleSubmit}>
+      <input
+        value={val}
+        onChange={(e) => setValue(e.target.value)}
+        type="text"
+        placeholder="Enter Todo...👉"
+      />
+      <button type="submit">ADD</button>
+    </form>
   );
 };
 
