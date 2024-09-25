@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const List = ({ lst, listDel, onEdit, onCheck }) => {
+const List = ({ lst, listDel, onEdit }) => {
   const [isEdting, setEditing] = useState(false);
   const [editTxt, setEditTxt] = useState(lst.val);
 
@@ -30,11 +30,11 @@ const List = ({ lst, listDel, onEdit, onCheck }) => {
         ) : (
           <>
             <div className="inputData">
-              <input
+              {/* <input
                 type="checkbox"
                 value={lst.checked}
                 onClick={() => onCheck(lst.id)}
-              />
+              /> */}
               <span
                 style={lst.checked ? { textDecoration: "Line-through" } : {}}
               >
@@ -64,7 +64,6 @@ List.propTypes = {
   ).isRequired,
   listDel: PropTypes.func.isRequired,
   onEdit: PropTypes.func.isRequired,
-  onCheck: PropTypes.func.isRequired,
 };
 
 export default List;

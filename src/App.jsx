@@ -26,11 +26,11 @@ function App() {
     setList(updateList);
   };
 
-  const handleCheck = (id) => {
-    setList((list) =>
-      list.map((i) => (i.id === id ? { ...i, checked: !i.checked } : i))
-    );
-  };
+  // const handleCheck = (id) => {
+  //   setList((list) =>
+  //     list.map((i) => (i.id === id ? { ...i, checked: !i.checked } : i))
+  //   );
+  // };
 
   return (
     <>
@@ -44,7 +44,7 @@ function App() {
           list={list}
           listDel={handleDel}
           onEdit={handleEdit}
-          onCheck={handleCheck}
+          // onCheck={handleCheck}
         />
       ) : (
         <>
