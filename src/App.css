@@ -153,6 +153,9 @@ span {
 .emptylist h1 {
   width: 100%;
   height: auto;
+  font-weight: 900;
+  -webkit-text-stroke: 4px black;
+  color: transparent;
   font-size: 4rem;
   background-color: transparent;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
