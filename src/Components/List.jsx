@@ -1,33 +1,57 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 
-const List = ({ list, listDel }) => {
+const List = ({ lst, listDel, onEdit }) => {
+  const [isEdting, setEditing] = useState(false);
+  const [editTxt, setEditTxt] = useState(lst.val);
+
+  const handleTxt = () => {
+    onEdit(lst.id, editTxt);
+    setEditing(false);
+  };
   return (
     <div>
-      {list &&
-        list.map((lst) => {
-          return (
-            <li key={lst.id}>
-              {" "}
-              <span>{lst.val}</span>
+      <li>
+        {isEdting ? (
+          <>
+            <form onSubmit={handleTxt} className="myedit">
+              <input
+                className="editInput"
+                type="text"
+                value={editTxt}
+                onChange={(e) => setEditTxt(e.target.value)}
+              />
               <div className="buttons">
-                <span>📁</span>
-                <span onClick={() => listDel(lst.id)}>❌</span>
+                <span> 📁</span>
               </div>
-            </li>
-          );
-        })}
+            </form>
+          </>
+        ) : (
+          <>
+            <span>{lst.val}</span>
+            <div className="buttons">
+              <span onClick={() => setEditing(true)}>🖋️</span>
+              <span onClick={() => listDel(lst.id)}>❌</span>
+            </div>
+          </>
+        )}
+
+        {/*  */}
+      </li>
     </div>
   );
 };
 
 List.propTypes = {
-  list: PropTypes.arrayOf(
+  lst: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-      val: PropTypes.string.isRequired,
+      keyid: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
+      lstval: PropTypes.string.isRequired,
     })
   ).isRequired,
   listDel: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
 };
 
 export default List;

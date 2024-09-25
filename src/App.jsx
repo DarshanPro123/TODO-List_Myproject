@@ -17,13 +17,13 @@ function App() {
     setList((list) => list.filter((item) => item.id !== id));
   };
 
-  // const handleEdit = (id) => {
-  //   if (editId === id) {
-  //     setEdit((edit) => !edit);
-  //     setEditId(null);
-  //   }
-  //   console.log(edit);
-  // };
+  const handleEdit = (id, newtxt) => {
+    const updateList = list.map((lst) =>
+      lst.id === id ? { ...lst, val: newtxt } : lst
+    );
+
+    setList(updateList);
+  };
 
   return (
     <>
@@ -33,7 +33,7 @@ function App() {
         <Input_todo list={list} onhandleAdd={handleAdd} />
       </div>
       {list.length > 0 ? (
-        <Lists list={list} listDel={handleDel} />
+        <Lists list={list} listDel={handleDel} onEdit={handleEdit} />
       ) : (
         <h1 className="emptylist">Oops!! List is Empty 📬</h1>
       )}

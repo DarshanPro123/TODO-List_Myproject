@@ -169,6 +169,20 @@ span {
   cursor: pointer;
 }
 
+.myedit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editInput {
+  background-color: transparent;
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 430px) {
   .lists_box {
