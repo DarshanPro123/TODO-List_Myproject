@@ -140,7 +140,7 @@ span {
   height: 100vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  display: flex;
+  /* display: flex;
   font-size: 4rem;
   font-weight: 500;
   color: #080808;
@@ -148,10 +148,16 @@ span {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 100;
+  z-index: 100; */
 }
-
-.emptylist::before {
+.emptylist h1 {
+  width: 100%;
+  height: auto;
+  font-size: 4rem;
+  background-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* .emptylist::before {
   content: "";
   position: absolute;
   top: 0;
@@ -160,6 +166,16 @@ span {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.368);
   z-index: 1;
+} */
+
+.emptylist img {
+  filter: drop-shadow(10px 10px 20px rgb(252, 19, 19));
+}
+
+.emptylist img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: drop-shadow(10px 60px 40px rgba(27, 26, 26, 0.844));
 }
 
 .buttons span {
@@ -191,5 +207,18 @@ span {
 
   span {
     font-size: 14px;
+  }
+
+  .emptylist {
+    flex-direction: column;
+  }
+
+  .emptylist img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .emptylist::before {
+    width: 100%;
   }
 }

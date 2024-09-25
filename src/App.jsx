@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Input_todo from "./Components/Input_todo";
 import Lists from "./Components/Lists";
-import bgimg from "./assets/boythink.jpg";
+import bgimg from "./assets/boythink.png";
 
 // updating is pending for context and redux
 
@@ -39,8 +39,12 @@ function App() {
         <>
           {" "}
           <div className="emptylist">
+            <h1>
+              {" "}
+              Oops
+              <em>‼</em> List is Empty ⁉️
+            </h1>
             <img src={bgimg} alt="" />
-            <h1>Oops!! List is Empty ⁉️</h1>
           </div>
         </>
       )}
