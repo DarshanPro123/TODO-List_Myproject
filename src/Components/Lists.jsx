@@ -3,22 +3,13 @@ import PropTypes from "prop-types";
 
 const Lists = ({ list, listDel, onEdit }) => {
   return (
-    <>
-      <div className="lists_box">
-        <ul>
-          {list.map((lst) => (
-            <List
-              key={lst.id}
-              lst={lst}
-              keyid={lst.id}
-              lstval={lst.val}
-              listDel={listDel}
-              onEdit={onEdit}
-            />
-          ))}
-        </ul>
-      </div>
-    </>
+    <div className="lists_box">
+      <ul>
+        {list.map((lst) => (
+          <List key={lst.id} lst={lst} listDel={listDel} onEdit={onEdit} />
+        ))}
+      </ul>
+    </div>
   );
 };
 

@@ -145,9 +145,6 @@ span {
   font-weight: 500;
   color: #080808;
   text-align: center;
-  background-image: url(./assets/questionmark.png);
-  background-repeat: no-repeat;
-  background-position: center;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -178,8 +175,9 @@ span {
 .editInput {
   background-color: transparent;
   padding: 10px;
-  width: 60%;
-  border: none;
+  font-size: 1.2rem;
+  width: 80%;
+  border: 2px solid #ccc;
   border-radius: 10px;
 }
 

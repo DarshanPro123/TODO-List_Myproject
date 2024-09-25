@@ -21,8 +21,9 @@ const List = ({ lst, listDel, onEdit }) => {
                 value={editTxt}
                 onChange={(e) => setEditTxt(e.target.value)}
               />
+
               <div className="buttons">
-                <span> 📁</span>
+                <span onClick={handleTxt}> 📁</span>
               </div>
             </form>
           </>
@@ -47,7 +48,7 @@ List.propTypes = {
     PropTypes.shape({
       keyid: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
         .isRequired,
-      lstval: PropTypes.string.isRequired,
+      val: PropTypes.string.isRequired,
     })
   ).isRequired,
   listDel: PropTypes.func.isRequired,

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Input_todo from "./Components/Input_todo";
 import Lists from "./Components/Lists";
+import bgimg from "./assets/boythink.jpg";
 
 // updating is pending for context and redux
 
@@ -35,7 +36,13 @@ function App() {
       {list.length > 0 ? (
         <Lists list={list} listDel={handleDel} onEdit={handleEdit} />
       ) : (
-        <h1 className="emptylist">Oops!! List is Empty 📬</h1>
+        <>
+          {" "}
+          <div className="emptylist">
+            <img src={bgimg} alt="" />
+            <h1>Oops!! List is Empty ⁉️</h1>
+          </div>
+        </>
       )}
     </>
   );
