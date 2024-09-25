@@ -8,7 +8,7 @@ const Input_todo = ({ onhandleAdd }) => {
     e.preventDefault();
     console.log(val);
 
-    const newList = { val, id: Date.now() };
+    const newList = { val, id: Date.now(), checked: false };
     console.log(newList);
     {
       val.length !== 0 ? onhandleAdd(newList) : alert("Add value on list");

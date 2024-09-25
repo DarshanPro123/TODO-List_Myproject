@@ -26,6 +26,12 @@ function App() {
     setList(updateList);
   };
 
+  const handleCheck = (id) => {
+    setList((list) =>
+      list.map((i) => (i.id === id ? { ...i, checked: !i.checked } : i))
+    );
+  };
+
   return (
     <>
       {" "}
@@ -34,7 +40,12 @@ function App() {
         <Input_todo list={list} onhandleAdd={handleAdd} />
       </div>
       {list.length > 0 ? (
-        <Lists list={list} listDel={handleDel} onEdit={handleEdit} />
+        <Lists
+          list={list}
+          listDel={handleDel}
+          onEdit={handleEdit}
+          onCheck={handleCheck}
+        />
       ) : (
         <>
           {" "}
