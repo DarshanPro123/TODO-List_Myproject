@@ -16,10 +16,22 @@ body {
   text-align: center;
 }
 
-h1 {
+.header {
+  background-color: antiquewhite;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
   text-transform: uppercase;
   font-family: "Monoton";
-  background-color: antiquewhite;
+}
+
+.header span {
+  color: rgb(250, 36, 36);
 }
 
 .input-base {

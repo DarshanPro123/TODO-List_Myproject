@@ -4,48 +4,39 @@ import Input_todo from "./Components/Input_todo";
 import Lists from "./Components/Lists";
 import EmptyList from "./Components/EmptyList";
 
-// updating is pending for context and redux
-
 function App() {
   const [list, setList] = useState([]);
-  // const [edit, setEdit] = useState(false);
-  // const [editId, setEditId] = useState(null);
+
   const handleAdd = (data) => {
-    setList((datas) => [...datas, data]);
+    setList((prevList) => [...prevList, data]);
   };
 
   const handleDel = (id) => {
-    setList((list) => list.filter((item) => item.id !== id));
+    setList((prevList) => prevList.filter((item) => item.id !== id));
   };
 
   const handleEdit = (id, newtxt) => {
-    const updateList = list.map((lst) =>
-      lst.id === id ? { ...lst, val: newtxt } : lst
+    const updatedList = list.map((item) =>
+      item.id === id ? { ...item, val: newtxt } : item
     );
-
-    setList(updateList);
+    setList(updatedList);
   };
-
-  // const handleCheck = (id) => {
-  //   setList((list) =>
-  //     list.map((i) => (i.id === id ? { ...i, checked: !i.checked } : i))
-  //   );
-  // };
 
   return (
     <>
-      {" "}
-      <h1>my to-do app</h1>
+      <div className="header">
+        <h1>My To-Do App</h1>
+        <span>
+          {list.length > 0
+            ? `You have ${list.length} item${list.length > 1 ? "s" : ""}`
+            : `Your list is empty`}
+        </span>
+      </div>
       <div className="input-base">
-        <Input_todo list={list} onhandleAdd={handleAdd} />
+        <Input_todo onhandleAdd={handleAdd} />
       </div>
       {list.length > 0 ? (
-        <Lists
-          list={list}
-          listDel={handleDel}
-          onEdit={handleEdit}
-          // onCheck={handleCheck}
-        />
+        <Lists list={list} listDel={handleDel} onEdit={handleEdit} />
       ) : (
         <EmptyList />
       )}
