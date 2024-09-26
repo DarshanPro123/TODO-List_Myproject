@@ -198,6 +198,32 @@ span {
   border-radius: 10px;
 }
 
+.custom-select {
+  min-width: 200px; /* Set a minimum width */
+  position: relative; /* Position for custom arrow */
+}
+
+.custom-select select {
+  appearance: none; /* Remove default styling */
+  width: 60%; /* Full width */
+  font-size: 1rem; /* Font size */
+  padding: 0.5em; /* Padding around text */
+  background-color: #fff; /* Background color */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  color: #333; /* Text color */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Custom arrow using a pseudo-element */
+.custom-select::after {
+  content: "🔻"; /* Custom arrow character */
+  position: absolute;
+  right: 23%;
+  top: calc(50% - 0.32em); /* Center the arrow vertically */
+  pointer-events: none; /* Prevent interaction with the arrow */
+}
+
 /* Responsive Design */
 @media (max-width: 430px) {
   .lists_box {
