@@ -157,15 +157,6 @@ span {
   height: 100vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /* display: flex;
-  font-size: 4rem;
-  font-weight: 500;
-  color: #080808;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 100; */
 }
 .emptylist h1 {
   width: 100%;
@@ -177,16 +168,6 @@ span {
   background-color: transparent;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-/* .emptylist::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.368);
-  z-index: 1;
-} */
 
 .emptylist img {
   filter: drop-shadow(10px 10px 20px rgb(32, 31, 31));

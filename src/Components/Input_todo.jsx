@@ -3,7 +3,6 @@ import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 const Input_todo = ({ onhandleAdd }) => {
   const [val, setValue] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -17,16 +16,21 @@ const Input_todo = ({ onhandleAdd }) => {
     setValue("");
   };
 
+  // const handleChange = ;
+
   return (
-    <form className="input-box" onSubmit={handleSubmit}>
-      <input
-        value={val}
-        onChange={(e) => setValue(e.target.value)}
-        type="text"
-        placeholder="Enter Todo...👉"
-      />
-      <button type="submit">ADD</button>
-    </form>
+    <>
+      {" "}
+      <form className="input-box" onSubmit={handleSubmit}>
+        <input
+          value={val}
+          onChange={(e) => setValue(e.target.value)}
+          type="text"
+          placeholder="Enter Todo...👉"
+        />
+        <button type="submit">ADD</button>
+      </form>
+    </>
   );
 };
 

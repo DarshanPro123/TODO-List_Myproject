@@ -12,33 +12,37 @@ const List = ({ lst, listDel, onEdit }) => {
   };
 
   return (
-    <li>
-      {isEditing ? (
-        <form onSubmit={handleTxt} className="myedit">
-          <input
-            className="editInput"
-            type="text"
-            value={editTxt}
-            onChange={(e) => setEditTxt(e.target.value)}
-          />
-          <div className="buttons">
-            <button type="submit">📁</button>
-          </div>
-        </form>
-      ) : (
-        <>
-          <div className="inputData">
-            <span style={lst.checked ? { textDecoration: "line-through" } : {}}>
-              {lst.val}
-            </span>
-          </div>
-          <div className="buttons">
-            <span onClick={() => setEditing(true)}>🖋️</span>
-            <span onClick={() => listDel(lst.id)}>❌</span>
-          </div>
-        </>
-      )}
-    </li>
+    <>
+      <li>
+        {isEditing ? (
+          <form onSubmit={handleTxt} className="myedit">
+            <input
+              className="editInput"
+              type="text"
+              value={editTxt}
+              onChange={(e) => setEditTxt(e.target.value)}
+            />
+            <div className="buttons">
+              <button type="submit">📁</button>
+            </div>
+          </form>
+        ) : (
+          <>
+            <div className="inputData">
+              <span
+                style={lst.checked ? { textDecoration: "line-through" } : {}}
+              >
+                {lst.val}
+              </span>
+            </div>
+            <div className="buttons">
+              <span onClick={() => setEditing(true)}>🖋️</span>
+              <span onClick={() => listDel(lst.id)}>❌</span>
+            </div>
+          </>
+        )}
+      </li>
+    </>
   );
 };
 List.propTypes = {
