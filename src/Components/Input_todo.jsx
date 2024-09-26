@@ -16,8 +16,6 @@ const Input_todo = ({ onhandleAdd, clearAll }) => {
     setValue("");
   };
 
-  // const handleChange = ;
-
   return (
     <>
       <div className="input-base">

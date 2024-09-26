@@ -6,7 +6,7 @@ const List = ({ lst, listDel, onEdit }) => {
   const [editTxt, setEditTxt] = useState(lst.val);
 
   const handleTxt = (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
     onEdit(lst.id, editTxt);
     setEditing(false);
   };

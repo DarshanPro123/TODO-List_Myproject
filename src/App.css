@@ -106,17 +106,6 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
-@media (max-width: 430px) {
-  .input-box {
-    flex-direction: column;
-    margin: 40px 0;
-  }
-
-  input[type="text"] {
-    width: 100%;
-  }
-}
-
 /* Lists.css */
 
 .lists_box {
@@ -258,6 +247,15 @@ span {
   }
 
   .emptylist::before {
+    width: 100%;
+  }
+
+  .input-box {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  input[type="text"] {
     width: 100%;
   }
 }
