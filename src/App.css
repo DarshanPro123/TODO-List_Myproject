@@ -204,24 +204,24 @@ span {
 }
 
 .custom-select select {
-  appearance: none; /* Remove default styling */
-  width: 60%; /* Full width */
-  font-size: 1rem; /* Font size */
-  padding: 0.5em; /* Padding around text */
-  background-color: #fff; /* Background color */
-  border: 1px solid #ccc; /* Border color */
-  border-radius: 4px; /* Rounded corners */
-  color: #333; /* Text color */
-  cursor: pointer; /* Change cursor on hover */
+  appearance: none;
+  width: 60%;
+  font-size: 1rem;
+  padding: 1em;
+  background-color: #f6e6b7;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  color: #333;
+  cursor: pointer;
 }
 
 /* Custom arrow using a pseudo-element */
 .custom-select::after {
-  content: "🔻"; /* Custom arrow character */
+  content: "🔻";
   position: absolute;
   right: 23%;
-  top: calc(50% - 0.32em); /* Center the arrow vertically */
-  pointer-events: none; /* Prevent interaction with the arrow */
+  top: calc(50% - 0.32em);
+  pointer-events: none;
 }
 
 /* Responsive Design */
