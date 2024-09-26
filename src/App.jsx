@@ -22,6 +22,13 @@ function App() {
     setList(updatedList);
   };
 
+  const handleClearAll = () => {
+    const confirmed = window.confirm("do yuou want to Delete all lists 🥵 ⁉️");
+    if (confirmed) {
+      if (list.length > 0) setList([]);
+    }
+  };
+
   return (
     <>
       <div className="header">
@@ -32,9 +39,9 @@ function App() {
             : `Your list is empty`}
         </span>
       </div>
-      <div className="input-base">
-        <Input_todo onhandleAdd={handleAdd} />
-      </div>
+
+      <Input_todo onhandleAdd={handleAdd} clearAll={handleClearAll} />
+
       {list.length > 0 ? (
         <Lists list={list} listDel={handleDel} onEdit={handleEdit} />
       ) : (

@@ -37,14 +37,25 @@ body {
 .input-base {
   background-color: rgb(88, 48, 7);
   width: 100%;
+  border: 1px solid red;
   height: 30vh;
   color: whitesmoke;
   font-family: "Roboto", system-ui;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
+}
+
+.input-base .out-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #0d0d0d;
+  color: whitesmoke;
 }
 
 .input-box {
@@ -87,7 +98,8 @@ input[type="text"]:focus {
   font-size: 1.4rem;
 }
 
-.input-box button:hover {
+.input-box button:hover,
+.input-base .out-btn:hover {
   background-color: rgb(254, 202, 134);
   color: rgb(40, 40, 40);
   border: 1px solid greenyellow;
@@ -199,8 +211,8 @@ span {
 }
 
 .custom-select {
-  min-width: 200px; /* Set a minimum width */
-  position: relative; /* Position for custom arrow */
+  min-width: 200px;
+  position: relative;
 }
 
 .custom-select select {
