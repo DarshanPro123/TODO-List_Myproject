@@ -28,7 +28,7 @@ Lists.propTypes = {
   ).isRequired,
   listDel: PropTypes.func.isRequired,
   onEdit: PropTypes.func.isRequired,
-  onCheck: PropTypes.func.isRequired,
+  onCheck: PropTypes.func,
 };
 
 export default Lists;
